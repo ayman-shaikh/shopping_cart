@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Cart</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<button id = "refresh">Refresh</button>
+<table class = "styled-table">
+<thead></thead>
+<tbody>
+<!-- here goes our data! -->
+</tbody>
+<tfoot>
+    <tr>
+      <th colspan="2">Total count:</th>
+      <td>0</td>
+	  <th colspan="1">Total amount:</th>
+      <td>0</td>
+    </tr>
+</tfoot>
+</table>
+<button id = "pay" onclick="openTheForm()"><span>Pay</button>
+<div id="popupForm" class="modal">
+      <div class="modal-content">
+        <div class="contact-form">
+          <span class="close" onclick="closeTheForm()">&times;</span>
+          <form>
+            <h1>Billing Information</h1>
+            <div>
+              <input class="fname" type="text" name="name" placeholder="Full name" required>
+              <input type="text" name="name" placeholder="Email" required>
+              <input type="number" name="name" placeholder="Phone number" required>
+            </div>
+            <button type="button" id="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+</div>
+</body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="build-table.js"></script>
+</html>
