@@ -58,6 +58,8 @@ function delete_data() {
 	axios.get('https://jkxmlaceh9.execute-api.ap-south-1.amazonaws.com/dev1')
 	.then(response => {
 		console.log(response)
+		delete_table();
+		update_totals(0, 0);
 	});
 }
 
@@ -143,8 +145,6 @@ document.getElementById("submit").addEventListener("click", function () {
 		send_email_and_sms();
 		closeTheForm();
 		delete_data();
-		delete_table();
-		update_totals(0, 0);
 		console.log("Paid");
 		alert('Thank you for shopping with us!');
 	}
