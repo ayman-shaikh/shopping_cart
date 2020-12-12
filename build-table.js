@@ -150,4 +150,7 @@ document.getElementById("submit").addEventListener("click", function () {
 	}
 });
 
-window.onload = function(){ get_data();} 
+window.onload = function(){ 
+	alert('Welcome to the Smart Shopping Cart webapp!')
+	get_data();
+} 
